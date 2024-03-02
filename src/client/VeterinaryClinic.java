@@ -10,12 +10,13 @@ import java.util.Scanner;
 public class VeterinaryClinic {
 
     public List<Personal> personals = new ArrayList<>();
-    List<Animal> patients = new ArrayList<>();
+    public List<Animal> patients = new ArrayList<>();
     public void toHire(Personal personal){
     personals.add(personal);
     }
     public void toFire(){
         Scanner in = new Scanner(System.in);
+        System.out.println();
         System.out.println("Кого хотите уволить?");
         for (int i = 0; i < personals.size(); i++) {
             System.out.println(String.format("%s. %s", i +1,personals.get(i)));
@@ -38,7 +39,9 @@ public class VeterinaryClinic {
         patients.add(animal);
     }
     public void toDischarge(){
+
         Scanner in = new Scanner(System.in);
+        System.out.println();
         System.out.println("Кого зотите выписать?");
         for (int i = 0; i < patients.size(); i++) {
             System.out.println(String.format("%s. %s", i +1,patients.get(i)));

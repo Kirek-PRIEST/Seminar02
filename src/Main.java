@@ -12,15 +12,23 @@ public class Main {
                                 "Йоркшир", "Ассистент", LocalDate.of(1939, 5, 30));
         Nurse nurse = new Nurse("Сестра", "миссис Холл", LocalDate.of(1912, 1, 16),
                                 "Йоркшир", "Экономка", LocalDate.of(1940, 6, 18));
-
+        Swift swift = new Swift("Тейлоу", 2, LocalDate.of(1937, 2, 16), new Owner());
+        Seal seal = new Seal("Сил", 15, LocalDate.of(1936, 8, 21), new Owner(), "Дискинеия задних конечностей");
         VeterinaryClinic clinic = new VeterinaryClinic();
         clinic.toHire(doc);
         clinic.toHire(doc2);
         clinic.toHire(nurse);
+        clinic.toAccept(swift);
+        clinic.toAccept(seal);
         for (int i = 0; i < clinic.personals.size(); i++) {
             System.out.println(clinic.personals.get(i));
         }
+       // clinic.toFire();
         System.out.println();
-        clinic.toFire();
+        System.out.println("Пациенты:");
+        for (int i = 0; i < clinic.patients.size(); i++) {
+            System.out.println(clinic.patients.get(i));
+        }
+        //clinic.toDischarge();
     }
 }

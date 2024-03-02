@@ -7,13 +7,13 @@ import client.Swimable;
 
 import java.time.LocalDate;
 
-public class Seel extends Animal implements Swimable, Goable {
+public class Seal extends Animal implements Swimable, Goable {
 
-    public Seel(String name, float weight, LocalDate age, Owner owner) {
-        super(name, weight, age, owner);
+    public Seal(String name, float weight, LocalDate age, Owner owner, String diagnosis) {
+        super(name, weight, age, owner, diagnosis);
     }
 
-    public Seel() {
+    public Seal() {
         super();
     }
 

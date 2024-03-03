@@ -1,8 +1,8 @@
-package client.imple;
+package client.imple.patients;
 
 import client.Animal;
-import client.Goable;
-import client.Owner;
+import client.interfaces.forAnimals.Goable;
+import client.imple.owners.Owner;
 
 import java.time.LocalDate;
 
@@ -17,10 +17,6 @@ public class Cat extends Animal implements Goable{
         super();
     }
 
-    @Override
-    public void eat() {
-        System.out.println("грызёт");
-    }
 
 
     @Override

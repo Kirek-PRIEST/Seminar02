@@ -1,4 +1,4 @@
-package client.imple;
+package client.imple.personal;
 
 import client.Personal;
 

@@ -1,6 +1,10 @@
-package client.imple;
+package client.imple.patients;
 
 import client.*;
+import client.imple.owners.Owner;
+import client.interfaces.forAnimals.Flyable;
+import client.interfaces.forAnimals.Goable;
+import client.interfaces.forAnimals.Swimable;
 
 import java.time.LocalDate;
 
@@ -12,10 +16,6 @@ public class Duck extends Animal implements Swimable, Flyable, Goable {
     public Duck() {
     }
 
-    @Override
-    public void eat() {
-        System.out.println("клюёт");
-    }
 
 
     @Override

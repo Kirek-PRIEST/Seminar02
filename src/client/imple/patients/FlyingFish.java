@@ -1,9 +1,9 @@
-package client.imple;
+package client.imple.patients;
 
 import client.Animal;
-import client.Flyable;
-import client.Owner;
-import client.Swimable;
+import client.interfaces.forAnimals.Flyable;
+import client.imple.owners.Owner;
+import client.interfaces.forAnimals.Swimable;
 
 import java.time.LocalDate;
 
@@ -15,10 +15,7 @@ public class FlyingFish extends Animal implements Swimable, Flyable {
     public FlyingFish() {
     }
 
-    @Override
-    public void eat() {
-        System.out.println("глотает");
-    }
+
 
     @Override
     public double swim() {

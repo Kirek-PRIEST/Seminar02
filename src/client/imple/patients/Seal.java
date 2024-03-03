@@ -1,9 +1,9 @@
-package client.imple;
+package client.imple.patients;
 
 import client.Animal;
-import client.Goable;
-import client.Owner;
-import client.Swimable;
+import client.interfaces.forAnimals.Goable;
+import client.imple.owners.Owner;
+import client.interfaces.forAnimals.Swimable;
 
 import java.time.LocalDate;
 
@@ -17,10 +17,7 @@ public class Seal extends Animal implements Swimable, Goable {
         super();
     }
 
-    @Override
-    public void eat() {
-        System.out.println("грызёт");
-    }
+
 
     @Override
     public double swim() {

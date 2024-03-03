@@ -1,13 +1,15 @@
 package client;
 
-import client.imple.Doctor;
-import client.imple.Nurse;
+import client.interfaces.forAnimals.Flyable;
+import client.interfaces.forAnimals.Goable;
+import client.interfaces.forAnimals.Swimable;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class VeterinaryClinic {
+    protected Scanner in = new Scanner(System.in);
 
     public List<Personal> personals = new ArrayList<>();
     public List<Animal> patients = new ArrayList<>();
@@ -39,8 +41,6 @@ public class VeterinaryClinic {
         patients.add(animal);
     }
     public void toDischarge(){
-
-        Scanner in = new Scanner(System.in);
         System.out.println();
         System.out.println("Кого зотите выписать?");
         for (int i = 0; i < patients.size(); i++) {
@@ -58,5 +58,32 @@ public class VeterinaryClinic {
             System.out.println(patients.get(i));
         }
         in.close();
+    }
+    public void sweeming(List<Animal> list){
+        System.out.println();
+        System.out.println("Плавающие");
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) instanceof Swimable){
+                System.out.println(list.get(i));
+            }
+        }
+    }
+    public void going(List<Animal> list){
+        System.out.println();
+        System.out.println("Бегающие");
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) instanceof Goable){
+                System.out.println(list.get(i));
+            }
+        }
+    }
+    public void flying(List<Animal> list){
+        System.out.println();
+        System.out.println("Летающие");
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) instanceof Flyable){
+                System.out.println(list.get(i));
+            }
+        }
     }
 }

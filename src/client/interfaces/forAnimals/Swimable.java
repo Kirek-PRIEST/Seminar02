@@ -1,4 +1,4 @@
-package client;
+package client.interfaces.forAnimals;
 
 public interface Swimable {
     double swim ();

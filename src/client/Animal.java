@@ -1,6 +1,8 @@
 
 package client;
 
+import client.imple.owners.Owner;
+
 import java.time.LocalDate;
 
 
@@ -25,12 +27,6 @@ public abstract class Animal {
 
     }
 
-    public abstract void eat();
-
-    public String  getType(){
-        return getClass().getSimpleName();
-
-    }
 
 
     @Override

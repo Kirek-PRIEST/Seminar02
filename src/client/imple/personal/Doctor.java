@@ -1,6 +1,6 @@
-package client.imple;
+package client.imple.personal;
 
-import client.Healable;
+import client.interfaces.forPersonal.Healable;
 import client.Personal;
 
 import java.time.LocalDate;

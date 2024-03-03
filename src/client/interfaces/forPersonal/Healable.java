@@ -1,4 +1,4 @@
-package client;
+package client.interfaces.forPersonal;
 
 public interface Healable {
     void heal();

@@ -40,14 +40,14 @@ public class Main {
         for (int i = 0; i < clinic.personals.size(); i++) {
             System.out.println(clinic.personals.get(i));
         }
-        //clinic.toFire(); //Уволить персонал
+        clinic.toFire(); //Уволить персонал
         System.out.println();
         //Список пациентов
         System.out.println("Пациенты:");
         for (int i = 0; i < clinic.patients.size(); i++) {
             System.out.println(clinic.patients.get(i));
         }
-        //clinic.toDischarge(); //Выписать пациента
+        clinic.toDischarge(); //Выписать пациента
         //Списки пациентов по способностям
         clinic.sweeming(clinic.patients);
         clinic.going((clinic.patients));

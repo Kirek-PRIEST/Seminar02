@@ -60,30 +60,30 @@ public class VeterinaryClinic {
         }
         in.close();
     }
-    public void sweeming(List<Animal> list){
+    public void sweeming(){
         System.out.println();
         System.out.println("Плавающие");
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) instanceof Swimable){
-                System.out.println(list.get(i));
+        for (int i = 0; i < patients.size(); i++) {
+            if (patients.get(i) instanceof Swimable){
+                System.out.println(patients.get(i));
             }
         }
     }
-    public void going(List<Animal> list){
+    public void going(){
         System.out.println();
         System.out.println("Бегающие");
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) instanceof Goable){
-                System.out.println(list.get(i));
+        for (int i = 0; i < patients.size(); i++) {
+            if (patients.get(i) instanceof Goable){
+                System.out.println(patients.get(i));
             }
         }
     }
-    public void flying(List<Animal> list){
+    public void flying(){
         System.out.println();
         System.out.println("Летающие");
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) instanceof Flyable){
-                System.out.println(list.get(i));
+        for (int i = 0; i < patients.size(); i++) {
+            if (patients.get(i) instanceof Flyable){
+                System.out.println(patients.get(i));
             }
         }
     }

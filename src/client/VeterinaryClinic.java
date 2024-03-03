@@ -13,76 +13,88 @@ public class VeterinaryClinic {
 
     public List<Personal> personals = new ArrayList<>();
     public List<Animal> patients = new ArrayList<>();
-    public void toHire(Personal personal){
-    personals.add(personal);
+
+    public void toHire(Personal personal) {
+        personals.add(personal);
     }
-    public void toFire(){
+
+    public void toFire() {
         Scanner in = new Scanner(System.in);
         System.out.println();
-        System.out.println("Кого хотите уволить?");
+        System.out.println("Кого хотите уволить? (введите число от 1 до " + personals.size() + ")");
         for (int i = 0; i < personals.size(); i++) {
-            System.out.println(String.format("%s. %s", i +1,personals.get(i)));
+            System.out.println(String.format("%s. %s", i + 1, personals.get(i)));
         }
+
         int choice = in.nextInt();
-        if (choice > personals.size()){
-            System.out.println("введите число от 1 до " + personals.size() + 1);
+        if (choice > personals.size() | choice < 1) {
+            System.out.println("введите число от 1 до " + personals.size());
             toFire();
         }
-        System.out.println("Вы уволили: " + personals.remove(choice-1));
-        System.out.println();
-        System.out.println(personals.size() + " Остались:");
-        for (int i = 0; i < personals.size(); i++) {
-            System.out.println(personals.get(i));
+        else {
+            System.out.println("Вы уволили: " + personals.remove(choice - 1));
+            System.out.println();
+            System.out.println(personals.size() + " Остались:");
+            for (int i = 0; i < personals.size(); i++) {
+                System.out.println(personals.get(i));
+
+            }
+
         }
-        in.close();
 
     }
-    public void toAccept(Animal animal){
+
+    public void toAccept(Animal animal) {
         patients.add(animal);
     }
-    public void toDischarge(){
+
+    public void toDischarge() {
         Scanner in = new Scanner(System.in);
         System.out.println();
         System.out.println("Кого зотите выписать?");
         for (int i = 0; i < patients.size(); i++) {
-            System.out.println(String.format("%s. %s", i +1,patients.get(i)));
+            System.out.println(String.format("%s. %s", i + 1, patients.get(i)));
         }
         int choice = in.nextInt();
-        if (choice > patients.size()){
+        if (choice > patients.size()) {
             System.out.println("введите число от 1 до " + patients.size() + 1);
             toDischarge();
-        }
-        System.out.println("Вы выписали: " + patients.remove(choice-1));
-        System.out.println();
-        System.out.println(patients.size() + " Остались:");
-        for (int i = 0; i < patients.size(); i++) {
-            System.out.println(patients.get(i));
+        } else {
+            System.out.println("Вы выписали: " + patients.remove(choice - 1));
+            System.out.println();
+            System.out.println(patients.size() + " Остались:");
+            for (int i = 0; i < patients.size(); i++) {
+                System.out.println(patients.get(i));
+            }
         }
         in.close();
     }
-    public void sweeming(){
+
+    public void sweeming() {
         System.out.println();
         System.out.println("Плавающие");
         for (int i = 0; i < patients.size(); i++) {
-            if (patients.get(i) instanceof Swimable){
+            if (patients.get(i) instanceof Swimable) {
                 System.out.println(patients.get(i));
             }
         }
     }
-    public void going(){
+
+    public void going() {
         System.out.println();
         System.out.println("Бегающие");
         for (int i = 0; i < patients.size(); i++) {
-            if (patients.get(i) instanceof Goable){
+            if (patients.get(i) instanceof Goable) {
                 System.out.println(patients.get(i));
             }
         }
     }
-    public void flying(){
+
+    public void flying() {
         System.out.println();
         System.out.println("Летающие");
         for (int i = 0; i < patients.size(); i++) {
-            if (patients.get(i) instanceof Flyable){
+            if (patients.get(i) instanceof Flyable) {
                 System.out.println(patients.get(i));
             }
         }
